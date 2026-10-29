@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#F8F3E9">
+<title>Amr & Esraa Royal Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#F8F3E9;
+  --pearl:#FFFCF7;
+  --gold:#C6A66B;
+  --antique:#A8874F;
+  --brown:#453728;
+  --gold-ink:#7d5f2c;
+  --night:#2a2018;
+  --candle:#f3d9a0;
+  --leaf:#A5A073;
+  --display:"Amiri","Traditional Arabic",serif;
+  --label:"Amiri",serif;
+  --script:"Aref Ruqaa","Amiri",serif;
+  --ar:"Amiri","Noto Naskh Arabic","Traditional Arabic",serif;
+  --ar-names:"Aref Ruqaa","Amiri",serif;
+  --gold-grad:linear-gradient(180deg,#e2cb96 0%,#C6A66B 45%,#A8874F 100%);
+  --grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35  0 0 0 0 .27  0 0 0 0 .16  0 0 0 .5 0'/></filter><rect width='160' height='160' filter='url(%23n)' opacity='.55'/></svg>");
+  color-scheme:light;
+}
+html,body{margin:0}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ivory) var(--grain);
+  color:var(--brown);
+  font-family:var(--display);
+  font-size:clamp(18px,1.2vw + 14px,21px);
+  line-height:1.9;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  overflow-x:hidden;
+}
+body.locked{overflow:hidden;height:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--antique);outline-offset:3px;border-radius:4px}
+button{font:inherit;color:inherit;cursor:pointer}
+
+.label{font-family:var(--label);font-size:.95rem;font-weight:700;color:var(--gold-ink)}
+.script{font-family:var(--script);font-weight:400;line-height:1.05}
+.goldtext{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+
+/* ---------- Roses ---------- */
+.bloom{position:absolute;pointer-events:none;width:clamp(150px,34vw,260px);aspect-ratio:1;filter:drop-shadow(0 8px 14px rgba(69,55,40,.18))}
+.bloom .r{position:absolute}
+.bloom .r svg,.bloom .lf svg{width:100%;height:100%;display:block;overflow:visible}
+.bloom .lf{position:absolute}
+.sway{animation:sway 9s ease-in-out infinite alternate;transform-origin:50% 90%}
+@keyframes sway{from{rotate:-1.6deg}to{rotate:1.8deg}}
+
+/* ---------- Gate ---------- */
+#gate{position:fixed;inset:0;z-index:60;background:radial-gradient(ellipse at 50% 42%,#4a3a28 0%,var(--night) 62%,#1a130d 100%);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(10px,2.4vh,24px);padding:16px max(16px,env(safe-area-inset-left,0px)) 16px;transition:opacity 1.3s ease,transform 1.5s ease}
+#gate::before{content:"";position:absolute;inset:0;background:var(--grain);opacity:.35;mix-blend-mode:soft-light;pointer-events:none}
+#gate .glow{position:absolute;left:50%;top:50%;width:140vmax;height:140vmax;translate:-50% -50%;background:radial-gradient(circle,rgba(243,217,160,.0) 0%,rgba(243,217,160,0) 40%);opacity:0;transition:opacity 1.2s ease;pointer-events:none}
+#gate.lit .glow{background:radial-gradient(circle,rgba(255,236,190,.85) 0%,rgba(243,217,160,.35) 22%,rgba(243,217,160,0) 55%);opacity:1}
+#gate.leaving{opacity:0;transform:scale(1.06);pointer-events:none}
+#gate canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.gate-top,.gate-bottom{position:relative;z-index:3;text-align:center;display:flex;flex-direction:column;align-items:center;gap:.35rem}
+.gate-top .label{color:var(--candle);font-size:1.05rem}
+.gate-names{font-size:clamp(3rem,13vw,5.4rem);color:var(--candle)}
+.gate-date{font-family:var(--display);font-style:italic;font-size:1.15rem;color:#e9d9b8;letter-spacing:.06em}
+
+.env{position:relative;z-index:3;width:min(82vw,380px);aspect-ratio:380/260;perspective:1100px;filter:drop-shadow(0 26px 30px rgba(0,0,0,.45))}
+.env>*{position:absolute}
+.env-back{inset:0;background:linear-gradient(180deg,#e8dcc0,#dccbA3);border-radius:4px;z-index:1}
+.env-card{left:7%;right:7%;top:5%;height:88%;z-index:2;background:var(--pearl) var(--grain);border:1px solid var(--gold);box-shadow:inset 0 0 0 5px var(--pearl),inset 0 0 0 6px rgba(198,166,107,.7);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:13%;gap:.3rem;transition:transform 1.5s cubic-bezier(.22,.8,.22,1) 1s,box-shadow 1s;text-align:center}
+.env-card .script{font-size:clamp(1.9rem,8vw,2.7rem)}
+.env-card .label{font-size:.85rem}
+.env-front{inset:0;z-index:3;background:linear-gradient(160deg,#f6eed9 0%,#ead9b3 100%);clip-path:polygon(0 0,50% 56%,100% 0,100% 100%,0 100%);border-radius:4px}
+.env-front::after{content:"";position:absolute;inset:0;background:var(--grain);opacity:.5;mix-blend-mode:multiply}
+.env-lines{inset:0;z-index:3;pointer-events:none}
+.env-flap{left:0;right:0;top:0;height:58%;z-index:5;transform-origin:50% 0;background:linear-gradient(180deg,#f8f0dc 0%,#eadbb7 100%);clip-path:polygon(0 0,100% 0,50% 100%);transition:transform 1s cubic-bezier(.5,.1,.3,1) .3s,z-index 0s .75s;backface-visibility:visible}
+.env-flap::after{content:"";position:absolute;inset:0;background:var(--grain);opacity:.45;mix-blend-mode:multiply}
+.seal{left:50%;top:56%;translate:-50% -50%;z-index:7;width:clamp(58px,17vw,74px);aspect-ratio:1;border:0;border-radius:50%;padding:0;background:radial-gradient(circle at 35% 30%,#f1dfb0 0%,#C6A66B 42%,#8e7038 100%);box-shadow:0 6px 12px rgba(0,0,0,.4),inset 0 0 0 3px rgba(255,255,255,.18),inset 0 -4px 8px rgba(80,55,15,.45);display:grid;place-items:center;transition:opacity .5s ease,scale .5s ease}
+.seal::before{content:"";position:absolute;inset:7px;border-radius:50%;border:1px solid rgba(255,245,215,.55)}
+.seal span{font-family:"Cinzel",serif;font-size:clamp(.95rem,3.2vw,1.2rem);letter-spacing:.06em;color:rgba(80,55,15,.85);text-shadow:0 1px 0 rgba(255,240,200,.6)}
+.opening .env-flap{transform:rotateX(180deg);z-index:1}
+.opening .seal{opacity:0;scale:.6;pointer-events:none}
+.opening .env-card{transform:translateY(-58%)}
+.lit .env-card{box-shadow:inset 0 0 0 5px var(--pearl),inset 0 0 0 6px rgba(198,166,107,.7),0 0 70px 14px rgba(255,236,190,.7)}
+
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:48px;padding:.85rem 2rem;border:1px solid var(--gold);background:transparent;color:var(--gold-ink);font-family:var(--label);font-size:1.05rem;font-weight:700;text-decoration:none;overflow:hidden;transition:color .5s,background .5s,box-shadow .5s,transform .3s;isolation:isolate}
+.btn::before{content:"";position:absolute;inset:0;background:var(--gold-grad);transform:translateY(101%);transition:transform .55s cubic-bezier(.2,.7,.2,1);z-index:-1}
+.btn:hover,.btn:focus-visible{color:var(--brown);box-shadow:0 10px 24px rgba(168,135,79,.35)}
+.btn:hover::before,.btn:focus-visible::before{transform:none}
+.btn:active{transform:scale(.98)}
+.btn.on-dark{color:var(--candle);border-color:rgba(243,217,160,.7)}
+.btn.on-dark:hover,.btn.on-dark:focus-visible{color:var(--night)}
+.btn.solid{background:var(--gold-grad);color:var(--brown);border-color:var(--antique)}
+.btn.solid::before{background:var(--brown);}
+.btn.solid:hover,.btn.solid:focus-visible{color:var(--pearl)}
+
+/* ---------- Music control ---------- */
+.music{position:fixed;z-index:70;bottom:calc(14px + env(safe-area-inset-bottom,0px));inset-inline-end:calc(14px + env(safe-area-inset-right,0px));display:flex;gap:6px;padding:6px;border-radius:999px;background:rgba(255,252,247,.88);border:1px solid rgba(198,166,107,.8);box-shadow:0 10px 26px rgba(69,55,40,.22);backdrop-filter:blur(8px);transition:opacity .6s}
+.music[hidden]{display:none}
+.music button{width:44px;height:44px;border-radius:50%;border:0;background:transparent;display:grid;place-items:center;color:var(--gold-ink);transition:background .3s}
+.music button:hover{background:rgba(198,166,107,.22)}
+.music svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.music .ic-pause,.music .ic-mute{display:none}
+.music.playing .ic-play{display:none}.music.playing .ic-pause{display:block}
+.music.muted .ic-vol{display:none}.music.muted .ic-mute{display:block}
+
+/* ---------- Main ---------- */
+main{position:relative;max-width:1000px;margin-inline:auto;display:flex;flex-direction:column;gap:clamp(56px,10vw,110px);padding-block:clamp(28px,6vw,64px) 120px}
+section{position:relative;text-align:center}
+.sec-head{display:flex;flex-direction:column;align-items:center;gap:.7rem;margin-bottom:1.6rem}
+.sec-head h2{margin:0;font-family:var(--label);font-size:clamp(1.5rem,5vw,2rem);font-weight:700;color:var(--brown);text-wrap:balance}
+.orn{display:flex;align-items:center;justify-content:center;gap:.8rem;color:var(--gold);width:min(260px,70%);margin-inline:auto}
+.orn i{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.orn i:last-child{background:linear-gradient(270deg,transparent,var(--gold))}
+.orn b{width:8px;height:8px;rotate:45deg;border:1px solid var(--gold);background:var(--ivory)}
+
+/* invitation card */
+.card-wrap{position:relative;padding:clamp(10px,3vw,30px)}
+.card{position:relative;background:var(--pearl) var(--grain);padding:clamp(48px,9vw,96px) clamp(22px,7vw,84px);box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 30px 60px -20px rgba(69,55,40,.35),0 8px 20px rgba(69,55,40,.08);outline:1px solid var(--gold);outline-offset:-14px;display:flex;flex-direction:column;align-items:center;gap:clamp(14px,2.6vw,24px);overflow:hidden}
+.card::before{content:"";position:absolute;inset:20px;border:1px solid rgba(198,166,107,.45);pointer-events:none}
+.corner{position:absolute;width:clamp(44px,9vw,70px);height:clamp(44px,9vw,70px);color:var(--gold);pointer-events:none;scale:-1 1}
+.corner.tr{scale:1 1}
+.corner.bl{scale:-1 -1}
+.corner.br{scale:1 -1}
+.card .names{font-size:clamp(3.6rem,15vw,7rem);line-height:1.35;padding-inline:.15em;margin:.1em 0;text-wrap:balance}
+.card .eyebrow{font-size:clamp(1.15rem,4vw,1.5rem);text-wrap:balance}
+.card .request{font-size:clamp(1.15rem,3.4vw,1.55rem);max-width:26ch;text-wrap:balance;margin:0}
+.when{display:flex;flex-direction:column;gap:.2rem;align-items:center}
+.when .d{font-family:var(--ar);font-weight:700;font-size:clamp(1.4rem,5vw,1.9rem);color:var(--brown)}
+.when .t{font-size:clamp(1.5rem,5vw,2.1rem);color:var(--antique);font-weight:500}
+.where{font-family:var(--display);font-size:clamp(1.3rem,4.4vw,1.7rem);color:var(--brown);direction:rtl}
+.closing{font-size:clamp(1.05rem,3vw,1.35rem);color:var(--gold-ink);max-width:28ch;margin:0;text-wrap:balance}
+
+/* countdown */
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,2.4vw,22px);max-width:720px;margin-inline:auto}
+.cd-box{background:var(--pearl) var(--grain);border:1px solid rgba(198,166,107,.8);padding:clamp(14px,3.6vw,30px) 4px clamp(10px,2.6vw,20px);box-shadow:0 14px 28px -16px rgba(69,55,40,.4),inset 0 0 0 4px var(--pearl),inset 0 0 0 5px rgba(198,166,107,.35);min-width:0}
+.cd-num{display:block;font-family:var(--display);font-weight:500;font-size:clamp(2rem,9vw,4rem);line-height:1;font-variant-numeric:tabular-nums lining-nums;color:var(--antique);transition:opacity .35s,transform .35s}
+.cd-num.tick{opacity:.35;transform:translateY(3px)}
+.cd-label{display:block;margin-top:.7rem;font-family:var(--label);font-size:clamp(.95rem,3.4vw,1.2rem);font-weight:700;color:var(--gold-ink)}
+.cd-note{margin:1.2rem 0 0;color:var(--gold-ink);font-size:1.05rem}
+.cd-done{font-size:clamp(1.4rem,4.4vw,2rem);max-width:24ch;margin-inline:auto;text-wrap:balance}
+
+/* Video Section (Sweet Moments) */
+.video-box {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 12px;
+  background: var(--pearl) var(--grain);
+  border: 1px solid rgba(198,166,107,.8);
+  box-shadow: 0 18px 30px -18px rgba(69,55,40,.45);
+}
+.video-box video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--gold);
+}
+
+/* venue */
+.venue{padding-block:clamp(20px,4vw,40px)}
+.arch{width:clamp(120px,28vw,190px);margin:0 auto .4rem;display:block;color:var(--gold)}
+.venue-name{font-size:clamp(1.9rem,6.4vw,3.2rem);margin:.2rem 0 1.4rem;font-weight:500;text-wrap:balance;direction:rtl}
+
+/* gallery */
+.gallery{columns:2;column-gap:clamp(12px,3vw,26px);max-width:900px;margin-inline:auto}
+.gallery figure{margin:0 0 clamp(12px,3vw,26px);break-inside:avoid;padding:clamp(6px,1.4vw,12px);background:var(--pearl) var(--grain);border:1px solid rgba(198,166,107,.7);box-shadow:0 18px 30px -18px rgba(69,55,40,.45);transition:transform .6s cubic-bezier(.2,.7,.2,1),box-shadow .6s}
+.gallery figure:hover{transform:translateY(-4px);box-shadow:0 26px 38px -18px rgba(69,55,40,.5)}
+.gallery img{display:block;width:100%;height:auto;filter:saturate(.92) sepia(.06)}
+@media(min-width:760px){.gallery{columns:4}}
+
+/* rsvp */
+.rsvp-box{max-width:560px;margin-inline:auto;background:var(--pearl) var(--grain);border:1px solid rgba(198,166,107,.8);padding:clamp(24px,6vw,52px);box-shadow:0 26px 50px -24px rgba(69,55,40,.4),inset 0 0 0 6px var(--pearl),inset 0 0 0 7px rgba(198,166,107,.35);text-align:start}
+.rsvp-box>p.sub{text-align:center;margin:0 0 1.4rem;font-size:1.15rem}
+.field{display:flex;flex-direction:column;gap:.45rem;margin-bottom:1.3rem;border:0;padding:0;min-width:0}
+.field>label,.field>legend{font-family:var(--label);font-size:1rem;font-weight:700;color:var(--gold-ink);padding:0}
+.field input[type=text],.field select,.field textarea{width:100%;font:inherit;font-size:1.15rem;color:var(--brown);background:var(--ivory);border:0;border-bottom:1px solid var(--gold);padding:.65rem .4rem;border-radius:0;min-height:46px}
+.field textarea{min-height:100px;resize:vertical;border:1px solid var(--gold);padding:.7rem}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice input{position:absolute;opacity:0;pointer-events:none}
+.choice label{display:flex;align-items:center;justify-content:center;text-align:center;min-height:58px;padding:.6rem .8rem;border:1px solid var(--gold);cursor:pointer;font-size:1.05rem;line-height:1.25;transition:background .35s,color .35s,box-shadow .35s}
+.choice input:checked+label{background:var(--gold-grad);color:var(--brown);font-weight:600;box-shadow:0 8px 18px -8px rgba(168,135,79,.8)}
+.stepper{display:flex;align-items:center;gap:0;border:1px solid var(--gold);width:fit-content}
+.stepper button{width:48px;height:48px;border:0;background:var(--ivory);font-size:1.5rem;color:var(--gold-ink)}
+.stepper output{min-width:56px;text-align:center;font-size:1.4rem;font-variant-numeric:tabular-nums}
+.err{color:#8a2f25;font-size:.98rem;min-height:1.3em;margin:-.6rem 0 .6rem}
+.rsvp-actions{display:flex;justify-content:center;margin-top:.4rem}
+.thanks{text-align:center;display:flex;flex-direction:column;align-items:center;gap:1rem}
+.thanks h3{margin:0;font-size:clamp(2.6rem,10vw,4rem);font-weight:400}
+
+/* thank-you */
+.final{padding-top:clamp(20px,4vw,48px)}
+.final .script{font-size:clamp(3.4rem,13vw,6rem);margin:.2rem 0;line-height:1.4}
+.final p{margin:0;font-size:1.3rem}
+
+/* Animations */
+.revealed .card .rise{animation:rise 1.4s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*.16s + .5s)}
+.revealed .card .bloom{animation:bloomin 2s cubic-bezier(.2,.7,.2,1) .4s both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes bloomin{from{opacity:0;scale:.82}to{opacity:.98;scale:1}}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+</style>
+</head>
+<body>
+
+<!-- ===== Gate: Envelope ===== -->
+<div id="gate" role="dialog" aria-label="Wedding invitation">
+  <canvas id="fxGate" aria-hidden="true"></canvas>
+  <div class="glow" aria-hidden="true"></div>
+
+  <div class="gate-top">
+    <span class="label">يسرنا دعوتكم لحضور حفل زفاف</span>
+    <div class="script gate-names">عمرو وإسراء</div>
+    <div class="gate-date">20 نوفمبر 2026</div>
+  </div>
+
+  <div class="env" id="env">
+    <div class="env-back"></div>
+    <div class="env-card" aria-hidden="true">
+      <span class="label">حفل زفاف</span>
+      <span class="script goldtext">عمرو وإسراء</span>
+      <span class="label">20 · 11 · 2026</span>
+    </div>
+    <div class="env-front"></div>
+    <svg class="env-lines" viewBox="0 0 380 260" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 L190 146 L380 0" fill="none" stroke="rgba(168,135,79,.55)" stroke-width="1"/><path d="M8 252 L8 20 M372 252 L372 20" stroke="none"/></svg>
+    <div class="env-flap"></div>
+    <button class="seal" id="seal" aria-label="افتح الدعوة" type="button"><span>ع &amp; إ</span></button>
+  </div>
+
+  <div class="gate-bottom">
+    <button class="btn on-dark" id="openBtn" type="button">افتح الدعوة</button>
+  </div>
+</div>
+
+<div class="music" id="music" hidden>
+  <button type="button" id="mPlay" aria-label="Play music">
+    <svg class="ic-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
+    <svg class="ic-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg>
+  </button>
+  <button type="button" id="mMute" aria-label="Mute music" aria-pressed="false">
+    <svg class="ic-vol" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11"/></svg>
+    <svg class="ic-mute" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg>
+  </button>
+</div>
+
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="corner" viewBox="0 0 70 70"><g fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"><path d="M2 2H46M2 2V46"/><path d="M9 9H34C42 9 42 21 34 21C28 21 28 14 33 14"/><path d="M9 9V34C9 42 21 42 21 34C21 28 14 28 14 33"/><path d="M2 58C16 56 24 48 26 34"/><path d="M58 2C56 16 48 24 34 26"/><circle cx="26" cy="26" r="2.2" fill="currentColor"/></g></symbol>
+</svg>
+
+<main id="app">
+  <!-- Invitation -->
+  <section id="invitation" aria-labelledby="names">
+    <div class="card-wrap">
+      <article class="card">
+        <svg class="corner tl" aria-hidden="true"><use href="#corner"/></svg>
+        <svg class="corner tr" aria-hidden="true"><use href="#corner"/></svg>
+        <svg class="corner bl" aria-hidden="true"><use href="#corner"/></svg>
+        <svg class="corner br" aria-hidden="true"><use href="#corner"/></svg>
+
+        <span class="label eyebrow rise" style="--i:0">بكل الحب والسرور</span>
+        <h1 id="names" class="script names goldtext rise" style="--i:1;margin:0">عمرو وإسراء</h1>
+        <p class="request rise" style="--i:2">يتشرفان بدعوتكم لمشاركتهما فرحة يوم زفافهما</p>
+        <div class="orn rise" style="--i:3" aria-hidden="true"><i></i><b></b><i></i></div>
+        <div class="when rise" style="--i:4">
+          <span class="d">الجمعة، 20 نوفمبر 2026</span>
+          <span class="t">السابعة مساءً</span>
+        </div>
+        <div class="where rise" style="--i:5">فندق هيلتون بيراميدز جولف<br>مصر</div>
+        <div class="orn rise" style="--i:6" aria-hidden="true"><i></i><b></b><i></i></div>
+        <p class="closing rise" style="--i:7">حضوركم يكتمل به أنسنا وسعادتنا.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Countdown -->
+  <section id="countdown" aria-labelledby="cdheading">
+    <div class="sec-head"><h2 id="cdheading">العد التنازلي لحفل الزفاف</h2><div class="orn" aria-hidden="true"><i></i><b></b><i></i></div></div>
+    <div id="cdGrid" class="cd" role="timer">
+      <div class="cd-box"><span class="cd-num" id="cdD">--</span><span class="cd-label">يوم</span></div>
+      <div class="cd-box"><span class="cd-num" id="cdH">--</span><span class="cd-label">ساعة</span></div>
+      <div class="cd-box"><span class="cd-num" id="cdM">--</span><span class="cd-label">دقيقة</span></div>
+      <div class="cd-box"><span class="cd-num" id="cdS">--</span><span class="cd-label">ثانية</span></div>
+    </div>
+  </section>
+
+  <!-- Sweet Moments Video Section -->
+  <section id="sweet-moments">
+    <div class="sec-head">
+      <h2>أجمل اللحظات (Sweet Moments)</h2>
+      <div class="orn" aria-hidden="true"><i></i><b></b><i></i></div>
+    </div>
+    <div class="video-box">
+      <video controls poster="photo1.jpg">
+        <source src="video.mp4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+      </video>
+    </div>
+  </section>
+
+  <!-- Venue -->
+  <section id="venue" class="venue" aria-labelledby="vh">
+    <svg class="arch" viewBox="0 -16 120 176" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M10 158V80C10 52 34 32 60 12C86 32 110 52 110 80V158"/>
+      <path d="M20 158V82C20 58 40 41 60 25C80 41 100 58 100 82V158"/>
+      <path d="M36 158V98C36 80 48 70 60 60C72 70 84 80 84 98V158" stroke-opacity=".55"/>
+    </svg>
+    <div class="sec-head"><h2 id="vh">مكان الحفل</h2></div>
+    <p class="venue-name">Hilton Pyramids Golf</p>
+    <a class="btn" id="mapBtn" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/Hilton+Pyramids+Golf/@29.9637124,31.0451819,17z">عرض الموقع على الخريطة</a>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" aria-labelledby="gh">
+    <div class="sec-head"><h2 id="gh">معرض الصور</h2><div class="orn" aria-hidden="true"><i></i><b></b><i></i></div></div>
+    <div class="gallery" id="galGrid">
+      <figure><img src="photo1.jpg" alt="Amr & Esraa"></figure>
+      <figure><img src="photo2.jpg" alt="Amr & Esraa"></figure>
+      <figure><img src="photo3.jpg" alt="Amr & Esraa"></figure>
+      <figure><img src="photo4.jpg" alt="Amr & Esraa"></figure>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp" aria-labelledby="rh">
+    <div class="sec-head"><h2 id="rh">تأكيد الحضور</h2><div class="orn" aria-hidden="true"><i></i><b></b><i></i></div></div>
+    <div class="rsvp-box">
+      <form id="rsvpForm" novalidate>
+        <p class="sub">يسعدنا أن تشاركونا خبر حضوركم</p>
+        <div class="field"><label for="gName">الاسم الكريم</label><input type="text" id="gName" name="name" required></div>
+        <fieldset class="field"><legend>هل ستخضرون الحفل؟</legend>
+          <div class="choice">
+            <input type="radio" name="attend" id="aYes" value="yes"><label for="aYes">يشرفني الحضور</label>
+            <input type="radio" name="attend" id="aNo" value="no"><label for="aNo">أعتذر بكل أسف</label>
+          </div>
+        </fieldset>
+        <div class="field" id="countField"><label for="gCountOut">عدد المرافقين</label>
+          <div class="stepper">
+            <button type="button" id="cMinus">−</button>
+            <output id="gCountOut">1</output>
+            <button type="button" id="cPlus">+</button>
+          </div>
+        </div>
+        <div class="field"><label for="gMsg">كلمة أو تهنئة للعروسين (اختياري)</label><textarea id="gMsg" name="message" rows="3"></textarea></div>
+        <div class="rsvp-actions"><button class="btn solid" type="submit">إرسال التأكيد</button></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Thank-you -->
+  <section class="final" id="thanks">
+    <div class="orn" aria-hidden="true"><i></i><b></b><i></i></div>
+    <div class="script goldtext">عمرو وإسراء</div>
+    <p>في انتظاركم لنحتفل معاً!</p>
+    <p class="label" style="margin-top:1rem">20 · 11 · 2026</p>
+  </section>
+</main>
+
+<audio id="bgm" src="music.mp4" preload="auto" loop></audio>
+
+<script>
+// ---------- Countdown Code ----------
+const eventDate = new Date(2026, 10, 20, 19, 0, 0).getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const diff = eventDate - now;
+
+  if (diff > 0) {
+    document.getElementById('cdD').innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+    document.getElementById('cdH').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    document.getElementById('cdM').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    document.getElementById('cdS').innerText = Math.floor((diff % (1000 * 60)) / 1000);
+  }
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// ---------- Envelope & Music Interaction ----------
+const gate = document.getElementById('gate');
+const openBtn = document.getElementById('openBtn');
+const seal = document.getElementById('seal');
+const bgm = document.getElementById('bgm');
+const musicCtrl = document.getElementById('music');
+const mPlay = document.getElementById('mPlay');
+
+function openEnvelope() {
+  gate.classList.add('opening');
+  setTimeout(() => {
+    gate.classList.add('leaving');
+    document.body.classList.add('revealed');
+    musicCtrl.removeAttribute('hidden');
+    bgm.play().catch(() => {});
+    musicCtrl.classList.add('playing');
+  }, 1200);
+}
+
+openBtn.addEventListener('click', openEnvelope);
+seal.addEventListener('click', openEnvelope);
+
+mPlay.addEventListener('click', () => {
+  if (bgm.paused) {
+    bgm.play();
+    musicCtrl.classList.add('playing');
+  } else {
+    bgm.pause();
+    musicCtrl.classList.remove('playing');
+  }
+});
+</script>
+</body>
+</html>
